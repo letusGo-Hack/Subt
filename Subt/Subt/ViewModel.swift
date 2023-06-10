@@ -12,11 +12,11 @@ class ViewModel: ObservableObject {
     @Published public var activity: Activity<SubtWidgetAttributes>?
     @Published public var remain: Int = 10
     
-    func createLiveAcitiviy() {
+    func createLiveAcitiviy(start: String, end: String) {
         let attributes = SubtWidgetAttributes(name: "test")
         let contentState = SubtWidgetAttributes.ContentState(
-            startStation: "신림",
-            endStation: "삼성",
+            startStation: start,
+            endStation: end,
             state: .departure,
             remainStation: self.remain
         )

@@ -33,11 +33,9 @@
 		CE345DBD2A34077D009062DD /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE345DBC2A34077D009062DD /* AppIntent.swift */; };
 		CE345DBF2A34077E009062DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE345DBE2A34077E009062DD /* Assets.xcassets */; };
 		CE345DC32A34077E009062DD /* SubtWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CE345DAF2A34077D009062DD /* SubtWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		CE5F85492A34254200C2068F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F85482A34254200C2068F /* Item.swift */; };
 		CE5F855F2A3427EE00C2068F /* SubtWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F85562A3427C800C2068F /* SubtWidgetLiveActivity.swift */; };
 		CE5F85602A3427F200C2068F /* SubtWidgetAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F85552A3427C800C2068F /* SubtWidgetAttributes.swift */; };
 		CE5F85612A3427FF00C2068F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE345D812A340757009062DD /* ContentView.swift */; };
-		CE5F85622A34280300C2068F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F85482A34254200C2068F /* Item.swift */; };
 		CE5F85632A34281B00C2068F /* LockScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F85502A3427C800C2068F /* LockScreenView.swift */; };
 		CE5F85642A34281D00C2068F /* DynamicIslandExpandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F85512A3427C800C2068F /* DynamicIslandExpandView.swift */; };
 		CE5F85652A34282000C2068F /* CompactTrailingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F85522A3427C800C2068F /* CompactTrailingView.swift */; };
@@ -127,7 +125,6 @@
 		CE345DBC2A34077D009062DD /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		CE345DBE2A34077E009062DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE345DC02A34077E009062DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE5F85482A34254200C2068F /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		CE5F85502A3427C800C2068F /* LockScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockScreenView.swift; sourceTree = "<group>"; };
 		CE5F85512A3427C800C2068F /* DynamicIslandExpandView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicIslandExpandView.swift; sourceTree = "<group>"; };
 		CE5F85522A3427C800C2068F /* CompactTrailingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompactTrailingView.swift; sourceTree = "<group>"; };
@@ -219,12 +216,10 @@
 				CE345D7F2A340757009062DD /* SubtApp.swift */,
 				CE345D812A340757009062DD /* ContentView.swift */,
 				CE72F3612A347773000C0EE1 /* ViewModel.swift */,
-				71D47CB82A342BA4004164CB /* OptionButton.swift */,
 				719F7DC82A34709D00767415 /* StationTextField.swift */,
 				71D47CB82A342BA4004164CB /* OptionButton.swift */,
 				719F7DCF2A3475F400767415 /* StartButton.swift */,
 				CE345D832A340758009062DD /* Assets.xcassets */,
-				CE5F85482A34254200C2068F /* Item.swift */,
 				CE345D852A340758009062DD /* Preview Content */,
 				719F7DCA2A34710A00767415 /* Title.swift */,
 			);
@@ -499,7 +494,6 @@
 				CE5F856B2A34282B00C2068F /* LockScreenView.swift in Sources */,
 				719F7DD02A3475F400767415 /* StartButton.swift in Sources */,
 				CE5F85682A34282500C2068F /* MinimalView.swift in Sources */,
-				CE5F85492A34254200C2068F /* Item.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,7 +530,6 @@
 				CE31AA892A345C3600EE1C14 /* RealtimeArrivalDTO.swift in Sources */,
 				CE345DB72A34077D009062DD /* SubtWidgetBundle.swift in Sources */,
 				CE5F857D2A34314C00C2068F /* Response.swift in Sources */,
-				CE5F85622A34280300C2068F /* Item.swift in Sources */,
 				CE72F3632A3477D0000C0EE1 /* ViewModel.swift in Sources */,
 				CE5F85672A34282400C2068F /* MinimalView.swift in Sources */,
 				CE5F85662A34282200C2068F /* CompactLeadingView.swift in Sources */,
@@ -701,7 +694,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Subt/Preview Content\"";
-				DEVELOPMENT_TEAM = 69RY8NDZ33;
+				DEVELOPMENT_TEAM = 8UV3Y69NB7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Subt/Info.plist;
@@ -736,7 +729,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Subt/Preview Content\"";
-				DEVELOPMENT_TEAM = 69RY8NDZ33;
+				DEVELOPMENT_TEAM = 8UV3Y69NB7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Subt/Info.plist;
@@ -845,7 +838,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 69RY8NDZ33;
+				DEVELOPMENT_TEAM = 8UV3Y69NB7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SubtWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = SubtWidget;
@@ -872,7 +865,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 69RY8NDZ33;
+				DEVELOPMENT_TEAM = 8UV3Y69NB7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SubtWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = SubtWidget;

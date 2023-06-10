@@ -32,6 +32,5 @@ struct SubtApp: App {
             
             ContentView()
         }
-        .modelContainer(for: Item.self)
     }
 }

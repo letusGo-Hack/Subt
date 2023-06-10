@@ -6,12 +6,9 @@
 //
 
 import SwiftUI
-import SwiftData
 import ActivityKit
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
     @StateObject var viewModel = ViewModel()
     @State var animation: Bool = false
     
@@ -26,15 +23,10 @@ struct ContentView: View {
 
             Text("Subway Tracker Widget")
                 .font(.title)
-            // Widget
-
-            RoundedRectangle(cornerRadius: 15)
-                .frame(maxWidth: .infinity, maxHeight: 130, alignment: .center)
-                .padding()
             
-            Title(title: "Animation")
-            OptionButton(animation: animation)
-                
+            Spacer()
+                .frame(height: 200)
+            
             HStack {
                 VStack {
                     Title(title: "START")
@@ -49,33 +41,21 @@ struct ContentView: View {
             }
             
             Button("Start") {
-                viewModel.createLiveAcitiviy()
+                viewModel.createLiveAcitiviy(start: startText, end: endText)
             }
             .buttonStyle(MyButtonStyle(buttonColor: .cyan, textColor: .white))
         }.onAppear(perform: {
             Task {
-                await viewModel.updateLiveActivity()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                    Task {
+                        await viewModel.updateLiveActivity()
+                    }
+                }
             }
         })
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
-        }
     }
 }
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
 }
