@@ -20,7 +20,7 @@ struct LockScreenView: View {
                 LinearProgressView(progress: progress)
                 Text(context.state.endStation)
             }
-            Text("\(context.state.remainStation)정거장 남았습니다.")
+            Text("\(context.state.remain)정거장 남았습니다.")
         }
         .padding()
         .activityBackgroundTint(Color("LineAirport"))
