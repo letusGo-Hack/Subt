@@ -27,20 +27,18 @@ struct SubtWidgetEntryView : View {
             }
             
             if entry.configuration.progress == 1 {
-                if entry.configuration.progress == 1 {
-                    VStack {
-                        Image(systemName: "checkmark.circle.fill")
-                            .font(.largeTitle)
-                            .foregroundColor(.green)
-                            .scaleEffect(2, anchor: .center)
-                            .animation(.spring())
+                VStack {
+                    Image(systemName: "checkmark.circle.fill")
+                        .font(.largeTitle)
+                        .foregroundColor(.green)
+                        .scaleEffect(2, anchor: .center)
+                        .animation(.spring())
+                        .onAppear {
+                            pushEndNoti()
+                        }
                         
-                        Text("내리라고 ㅋ")
-                            .font(.system(size: 20, weight: .bold))
-                            .padding(.top ,30)
-                    }
-                    
                 }
+                
             }
         }
         .containerBackground(LinearGradient(gradient: Gradient(stops: [
@@ -59,6 +57,23 @@ struct SubtWidgetEntryView : View {
                 
                 ProgressView(value: entry.configuration.progress, total: 1)
                     .tint(.white)
+            }
+        }
+    }
+    
+    private func pushEndNoti() {
+        let content = UNMutableNotificationContent()
+        content.title = "목적지에 거의 도착했어요!"
+        content.body = "물건을 잘 챙기고, 늦지않게 내릴수 있도록 준비하세요."
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 12, repeats: false)
+        let request = UNNotificationRequest(identifier: "NotificationIdentifier", content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request) { error in
+            if let error = error {
+                // 노티피케이션 요청 추가 중에 에러가 발생했습니다.
+                print("Error adding notification request: \(error.localizedDescription)")
+            } else {
+                // 노티피케이션 요청이 성공적으로 추가되었습니다.
+                print("Notification request added successfully.")
             }
         }
     }
