@@ -17,12 +17,26 @@
 		CE345DB22A34077D009062DD /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE345DB12A34077D009062DD /* WidgetKit.framework */; };
 		CE345DB42A34077D009062DD /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE345DB32A34077D009062DD /* SwiftUI.framework */; };
 		CE345DB72A34077D009062DD /* SubtWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE345DB62A34077D009062DD /* SubtWidgetBundle.swift */; };
-		CE345DB92A34077D009062DD /* SubtWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE345DB82A34077D009062DD /* SubtWidgetLiveActivity.swift */; };
 		CE345DBB2A34077D009062DD /* SubtWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE345DBA2A34077D009062DD /* SubtWidget.swift */; };
 		CE345DBD2A34077D009062DD /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE345DBC2A34077D009062DD /* AppIntent.swift */; };
 		CE345DBF2A34077E009062DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE345DBE2A34077E009062DD /* Assets.xcassets */; };
 		CE345DC32A34077E009062DD /* SubtWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CE345DAF2A34077D009062DD /* SubtWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CE5F85492A34254200C2068F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F85482A34254200C2068F /* Item.swift */; };
+		CE5F855F2A3427EE00C2068F /* SubtWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F85562A3427C800C2068F /* SubtWidgetLiveActivity.swift */; };
+		CE5F85602A3427F200C2068F /* SubtWidgetAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F85552A3427C800C2068F /* SubtWidgetAttributes.swift */; };
+		CE5F85612A3427FF00C2068F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE345D812A340757009062DD /* ContentView.swift */; };
+		CE5F85622A34280300C2068F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F85482A34254200C2068F /* Item.swift */; };
+		CE5F85632A34281B00C2068F /* LockScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F85502A3427C800C2068F /* LockScreenView.swift */; };
+		CE5F85642A34281D00C2068F /* DynamicIslandExpandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F85512A3427C800C2068F /* DynamicIslandExpandView.swift */; };
+		CE5F85652A34282000C2068F /* CompactTrailingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F85522A3427C800C2068F /* CompactTrailingView.swift */; };
+		CE5F85662A34282200C2068F /* CompactLeadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F85532A3427C800C2068F /* CompactLeadingView.swift */; };
+		CE5F85672A34282400C2068F /* MinimalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F85542A3427C800C2068F /* MinimalView.swift */; };
+		CE5F85682A34282500C2068F /* MinimalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F85542A3427C800C2068F /* MinimalView.swift */; };
+		CE5F85692A34282700C2068F /* CompactLeadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F85532A3427C800C2068F /* CompactLeadingView.swift */; };
+		CE5F856A2A34282900C2068F /* CompactTrailingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F85522A3427C800C2068F /* CompactTrailingView.swift */; };
+		CE5F856B2A34282B00C2068F /* LockScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F85502A3427C800C2068F /* LockScreenView.swift */; };
+		CE5F856C2A34282C00C2068F /* DynamicIslandExpandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F85512A3427C800C2068F /* DynamicIslandExpandView.swift */; };
+		CE5F856D2A34283600C2068F /* SubtWidgetAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F85552A3427C800C2068F /* SubtWidgetAttributes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,12 +92,18 @@
 		CE345DB12A34077D009062DD /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		CE345DB32A34077D009062DD /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		CE345DB62A34077D009062DD /* SubtWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtWidgetBundle.swift; sourceTree = "<group>"; };
-		CE345DB82A34077D009062DD /* SubtWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtWidgetLiveActivity.swift; sourceTree = "<group>"; };
 		CE345DBA2A34077D009062DD /* SubtWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtWidget.swift; sourceTree = "<group>"; };
 		CE345DBC2A34077D009062DD /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		CE345DBE2A34077E009062DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE345DC02A34077E009062DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE5F85482A34254200C2068F /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		CE5F85502A3427C800C2068F /* LockScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LockScreenView.swift; sourceTree = "<group>"; };
+		CE5F85512A3427C800C2068F /* DynamicIslandExpandView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicIslandExpandView.swift; sourceTree = "<group>"; };
+		CE5F85522A3427C800C2068F /* CompactTrailingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompactTrailingView.swift; sourceTree = "<group>"; };
+		CE5F85532A3427C800C2068F /* CompactLeadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompactLeadingView.swift; sourceTree = "<group>"; };
+		CE5F85542A3427C800C2068F /* MinimalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinimalView.swift; sourceTree = "<group>"; };
+		CE5F85552A3427C800C2068F /* SubtWidgetAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtWidgetAttributes.swift; sourceTree = "<group>"; };
+		CE5F85562A3427C800C2068F /* SubtWidgetLiveActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtWidgetLiveActivity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,14 +212,36 @@
 		CE345DB52A34077D009062DD /* SubtWidget */ = {
 			isa = PBXGroup;
 			children = (
+				CE5F854E2A3427C800C2068F /* LiveActivity */,
 				CE345DB62A34077D009062DD /* SubtWidgetBundle.swift */,
-				CE345DB82A34077D009062DD /* SubtWidgetLiveActivity.swift */,
 				CE345DBA2A34077D009062DD /* SubtWidget.swift */,
 				CE345DBC2A34077D009062DD /* AppIntent.swift */,
 				CE345DBE2A34077E009062DD /* Assets.xcassets */,
 				CE345DC02A34077E009062DD /* Info.plist */,
 			);
 			path = SubtWidget;
+			sourceTree = "<group>";
+		};
+		CE5F854E2A3427C800C2068F /* LiveActivity */ = {
+			isa = PBXGroup;
+			children = (
+				CE5F854F2A3427C800C2068F /* View */,
+				CE5F85552A3427C800C2068F /* SubtWidgetAttributes.swift */,
+				CE5F85562A3427C800C2068F /* SubtWidgetLiveActivity.swift */,
+			);
+			path = LiveActivity;
+			sourceTree = "<group>";
+		};
+		CE5F854F2A3427C800C2068F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE5F85502A3427C800C2068F /* LockScreenView.swift */,
+				CE5F85512A3427C800C2068F /* DynamicIslandExpandView.swift */,
+				CE5F85522A3427C800C2068F /* CompactTrailingView.swift */,
+				CE5F85532A3427C800C2068F /* CompactLeadingView.swift */,
+				CE5F85542A3427C800C2068F /* MinimalView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,9 +405,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE5F856C2A34282C00C2068F /* DynamicIslandExpandView.swift in Sources */,
+				CE5F85692A34282700C2068F /* CompactLeadingView.swift in Sources */,
+				CE5F856A2A34282900C2068F /* CompactTrailingView.swift in Sources */,
 				CE345D822A340757009062DD /* ContentView.swift in Sources */,
-				CE5F85492A34254200C2068F /* Item.swift in Sources */,
+				CE5F856D2A34283600C2068F /* SubtWidgetAttributes.swift in Sources */,
 				CE345D802A340757009062DD /* SubtApp.swift in Sources */,
+				CE5F856B2A34282B00C2068F /* LockScreenView.swift in Sources */,
+				CE5F85682A34282500C2068F /* MinimalView.swift in Sources */,
+				CE5F85492A34254200C2068F /* Item.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,9 +438,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE345DB92A34077D009062DD /* SubtWidgetLiveActivity.swift in Sources */,
+				CE5F85602A3427F200C2068F /* SubtWidgetAttributes.swift in Sources */,
 				CE345DBD2A34077D009062DD /* AppIntent.swift in Sources */,
+				CE5F85612A3427FF00C2068F /* ContentView.swift in Sources */,
+				CE5F85632A34281B00C2068F /* LockScreenView.swift in Sources */,
 				CE345DB72A34077D009062DD /* SubtWidgetBundle.swift in Sources */,
+				CE5F85622A34280300C2068F /* Item.swift in Sources */,
+				CE5F85672A34282400C2068F /* MinimalView.swift in Sources */,
+				CE5F85662A34282200C2068F /* CompactLeadingView.swift in Sources */,
+				CE5F855F2A3427EE00C2068F /* SubtWidgetLiveActivity.swift in Sources */,
+				CE5F85642A34281D00C2068F /* DynamicIslandExpandView.swift in Sources */,
+				CE5F85652A34282000C2068F /* CompactTrailingView.swift in Sources */,
 				CE345DBB2A34077D009062DD /* SubtWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
