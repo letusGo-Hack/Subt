@@ -11,7 +11,6 @@
 		CE345D822A340757009062DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE345D812A340757009062DD /* ContentView.swift */; };
 		CE345D842A340758009062DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE345D832A340758009062DD /* Assets.xcassets */; };
 		CE345D872A340758009062DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE345D862A340758009062DD /* Preview Assets.xcassets */; };
-		CE345D892A340758009062DD /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE345D882A340758009062DD /* Item.swift */; };
 		CE345D932A340759009062DD /* SubtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE345D922A340759009062DD /* SubtTests.swift */; };
 		CE345D9D2A340759009062DD /* SubtUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE345D9C2A340759009062DD /* SubtUITests.swift */; };
 		CE345D9F2A340759009062DD /* SubtUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE345D9E2A340759009062DD /* SubtUITestsLaunchTests.swift */; };
@@ -23,6 +22,7 @@
 		CE345DBD2A34077D009062DD /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE345DBC2A34077D009062DD /* AppIntent.swift */; };
 		CE345DBF2A34077E009062DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE345DBE2A34077E009062DD /* Assets.xcassets */; };
 		CE345DC32A34077E009062DD /* SubtWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CE345DAF2A34077D009062DD /* SubtWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CE5F85492A34254200C2068F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F85482A34254200C2068F /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +69,6 @@
 		CE345D812A340757009062DD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CE345D832A340758009062DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE345D862A340758009062DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		CE345D882A340758009062DD /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		CE345D8E2A340759009062DD /* SubtTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SubtTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE345D922A340759009062DD /* SubtTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtTests.swift; sourceTree = "<group>"; };
 		CE345D982A340759009062DD /* SubtUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SubtUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +83,7 @@
 		CE345DBC2A34077D009062DD /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		CE345DBE2A34077E009062DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE345DC02A34077E009062DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE5F85482A34254200C2068F /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +149,7 @@
 				CE345D7F2A340757009062DD /* SubtApp.swift */,
 				CE345D812A340757009062DD /* ContentView.swift */,
 				CE345D832A340758009062DD /* Assets.xcassets */,
-				CE345D882A340758009062DD /* Item.swift */,
+				CE5F85482A34254200C2068F /* Item.swift */,
 				CE345D852A340758009062DD /* Preview Content */,
 			);
 			path = Subt;
@@ -364,7 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE345D822A340757009062DD /* ContentView.swift in Sources */,
-				CE345D892A340758009062DD /* Item.swift in Sources */,
+				CE5F85492A34254200C2068F /* Item.swift in Sources */,
 				CE345D802A340757009062DD /* SubtApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -550,6 +550,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Subt/Info.plist;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -584,6 +585,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Subt/Info.plist;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
