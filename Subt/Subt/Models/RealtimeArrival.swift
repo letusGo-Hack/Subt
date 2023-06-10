@@ -45,8 +45,10 @@ struct RealtimeArrivalDTO: Decodable {
 }
 
 enum UpAndDownLine: String, Decodable {
-    case 상행내선 = "0"
-    case 하행외선 = "1"
+    case 상행
+    case 내선
+    case 하행
+    case 외선
 }
 
 enum TrainKind: String, Decodable {

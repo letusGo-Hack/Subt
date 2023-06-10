@@ -9,6 +9,7 @@ import Foundation
 
 enum NetworkError: Error {
     case invalidURL
+    case responseError(error: ErrorCode)
 }
 
 public class Service {
@@ -19,12 +20,20 @@ public class Service {
     
     func fetchArrivalInfo() async throws {
         let urlString: String = Service.host + Service.path + "삼성/"
-        guard let url = URL(string: urlString) else { throw NetworkError.invalidURL }
+        guard let url = URL(string: urlString)
+        else {
+            throw NetworkError.invalidURL
+        }
         
         do {
-            let (data, response) = try await URLSession.shared.data(from: url)
+            let (data, _) = try await URLSession.shared.data(from: url)
             let arrivalResponse = try JSONDecoder().decode(Response.self, from: data)
-//            let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String : Any]
+            
+            guard arrivalResponse.errorMessage.code.isValid
+            else {
+                throw NetworkError.responseError(error: arrivalResponse.errorMessage.code)
+            }
+            
             print(arrivalResponse.realtimeArrivalList.first)
         } catch {
             print(error)
