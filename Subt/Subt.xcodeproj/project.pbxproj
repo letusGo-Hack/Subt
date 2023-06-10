@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		71D47CB92A342BA4004164CB /* OptionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D47CB82A342BA4004164CB /* OptionButton.swift */; };
+		8C0DFBB12A34327D00BEBF98 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0DFBB02A34327D00BEBF98 /* Provider.swift */; };
+		8C0DFBB32A3432A900BEBF98 /* SubtWidgetEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0DFBB22A3432A900BEBF98 /* SubtWidgetEntryView.swift */; };
 		CE345D802A340757009062DD /* SubtApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE345D7F2A340757009062DD /* SubtApp.swift */; };
 		CE345D822A340757009062DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE345D812A340757009062DD /* ContentView.swift */; };
 		CE345D842A340758009062DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE345D832A340758009062DD /* Assets.xcassets */; };
@@ -90,6 +92,8 @@
 
 /* Begin PBXFileReference section */
 		71D47CB82A342BA4004164CB /* OptionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionButton.swift; sourceTree = "<group>"; };
+		8C0DFBB02A34327D00BEBF98 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		8C0DFBB22A3432A900BEBF98 /* SubtWidgetEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtWidgetEntryView.swift; sourceTree = "<group>"; };
 		CE345D7C2A340757009062DD /* Subt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Subt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE345D7F2A340757009062DD /* SubtApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtApp.swift; sourceTree = "<group>"; };
 		CE345D812A340757009062DD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -157,6 +161,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C0DFBAF2A34315300BEBF98 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				CE345DBA2A34077D009062DD /* SubtWidget.swift */,
+				CE345DBC2A34077D009062DD /* AppIntent.swift */,
+				8C0DFBB02A34327D00BEBF98 /* Provider.swift */,
+				8C0DFBB22A3432A900BEBF98 /* SubtWidgetEntryView.swift */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
 		CE345D732A340757009062DD = {
 			isa = PBXGroup;
 			children = (
@@ -232,10 +247,9 @@
 		CE345DB52A34077D009062DD /* SubtWidget */ = {
 			isa = PBXGroup;
 			children = (
+				8C0DFBAF2A34315300BEBF98 /* Widget */,
 				CE5F854E2A3427C800C2068F /* LiveActivity */,
 				CE345DB62A34077D009062DD /* SubtWidgetBundle.swift */,
-				CE345DBA2A34077D009062DD /* SubtWidget.swift */,
-				CE345DBC2A34077D009062DD /* AppIntent.swift */,
 				CE345DBE2A34077E009062DD /* Assets.xcassets */,
 				CE345DC02A34077E009062DD /* Info.plist */,
 			);
@@ -484,6 +498,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE5F85602A3427F200C2068F /* SubtWidgetAttributes.swift in Sources */,
+				8C0DFBB32A3432A900BEBF98 /* SubtWidgetEntryView.swift in Sources */,
 				CE5F857C2A34313900C2068F /* Service.swift in Sources */,
 				CE345DBD2A34077D009062DD /* AppIntent.swift in Sources */,
 				CE5F85612A3427FF00C2068F /* ContentView.swift in Sources */,
@@ -495,6 +510,7 @@
 				CE5F85662A34282200C2068F /* CompactLeadingView.swift in Sources */,
 				CE5F857E2A34314D00C2068F /* RealtimeArrivalDTO.swift in Sources */,
 				CE5F855F2A3427EE00C2068F /* SubtWidgetLiveActivity.swift in Sources */,
+				8C0DFBB12A34327D00BEBF98 /* Provider.swift in Sources */,
 				CE5F857F2A34314F00C2068F /* ErrorMessage.swift in Sources */,
 				CE5F85642A34281D00C2068F /* DynamicIslandExpandView.swift in Sources */,
 				CE5F85652A34282000C2068F /* CompactTrailingView.swift in Sources */,
@@ -652,7 +668,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Subt/Preview Content\"";
-				DEVELOPMENT_TEAM = 8UV3Y69NB7;
+				DEVELOPMENT_TEAM = 69RY8NDZ33;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Subt/Info.plist;
@@ -687,7 +703,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Subt/Preview Content\"";
-				DEVELOPMENT_TEAM = 8UV3Y69NB7;
+				DEVELOPMENT_TEAM = 69RY8NDZ33;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Subt/Info.plist;
@@ -796,7 +812,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8UV3Y69NB7;
+				DEVELOPMENT_TEAM = 69RY8NDZ33;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SubtWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = SubtWidget;
@@ -823,7 +839,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8UV3Y69NB7;
+				DEVELOPMENT_TEAM = 69RY8NDZ33;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SubtWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = SubtWidget;
