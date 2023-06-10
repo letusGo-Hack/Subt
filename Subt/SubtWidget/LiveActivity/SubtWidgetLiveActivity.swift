@@ -11,12 +11,10 @@ import SwiftUI
 
 struct SubtWidgetLiveActivity: Widget {
     
-    @State private var progress : Double = 0
-    
     var body: some WidgetConfiguration {
         ActivityConfiguration(for: SubtWidgetAttributes.self) { context in
             // Lock screen/banner UI goes here
-            LockScreenView(context: context, progress: progress)
+            LockScreenView(context: context, progress: Double(1 - context.state.remain / context.state.total))
             
         } dynamicIsland: { context in
             DynamicIsland {
@@ -26,7 +24,7 @@ struct SubtWidgetLiveActivity: Widget {
                 DynamicIslandExpandedRegion(.center) {
                     HStack(spacing : 30) {
                         Text(context.state.startStation)
-                        LinearProgressView(progress: progress)
+                        LinearProgressView(progress: Double(1 - context.state.remain / context.state.total))
                         Text(context.state.endStation)
                     }
                 }
@@ -39,7 +37,7 @@ struct SubtWidgetLiveActivity: Widget {
                 }
                 
                 DynamicIslandExpandedRegion(.bottom) {
-                    Text("\(context.state.remainStation)정거장 남았습니다.")
+                    Text("\(context.state.remain)정거장 남았습니다.")
                 }
             } compactLeading: {
                 CompactLeadingView(context: context)

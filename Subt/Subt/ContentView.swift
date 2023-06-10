@@ -41,18 +41,23 @@ struct ContentView: View {
             }
             
             Button("Start") {
-                viewModel.createLiveAcitiviy(start: startText, end: endText)
-            }
-            .buttonStyle(MyButtonStyle(buttonColor: .cyan, textColor: .white))
-        }.onAppear(perform: {
-            Task {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-                    Task {
-                        await viewModel.updateLiveActivity()
-                    }
+                viewModel.createLiveAcitiviy(start: startText, end: endText) {
+                    Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+                        if timer.timeInterval == 10 {
+                            Task {
+                                timer.invalidate()
+                                await viewModel.endLiveActivity()
+                            }
+                        } else {
+                            Task {
+                                await viewModel.updateLiveActivity()
+                            }
+                        }
+                    }.fire()
                 }
             }
-        })
+            .buttonStyle(MyButtonStyle(buttonColor: .cyan, textColor: .white))
+        }
     }
 }
 

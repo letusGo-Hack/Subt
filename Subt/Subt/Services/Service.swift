@@ -33,8 +33,6 @@ public class Service {
             else {
                 throw NetworkError.responseError(error: arrivalResponse.errorMessage.code)
             }
-            
-            print(arrivalResponse.realtimeArrivalList.first)
         } catch {
             print(error)
         }

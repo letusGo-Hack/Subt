@@ -22,7 +22,8 @@ public struct SubtWidgetAttributes: ActivityAttributes {
         var startStation : String
         var endStation : String
         var state : OperationState
-        var remainStation : Int
+        var total: Int
+        var remain : Int
     }
 
     // Fixed non-changing properties about your activity go here!
