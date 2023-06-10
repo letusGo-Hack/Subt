@@ -13,6 +13,6 @@ struct MinimalView: View {
     let context : ActivityViewContext<SubtWidgetAttributes>
     
     var body: some View {
-        Text(context.state.emoji)
+        Text("🐳")
     }
 }

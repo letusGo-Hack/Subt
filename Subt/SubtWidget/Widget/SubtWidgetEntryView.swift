@@ -12,19 +12,37 @@ struct SubtWidgetEntryView : View {
     var entry: Provider.Entry
     
     var body: some View {
-        HStack(spacing : 10) {
-            Text(entry.configuration.startStation)
-                .fontWeight(.bold)
-                .foregroundStyle(.white)
+        ZStack {
+            HStack(spacing : 10) {
+                Text(entry.configuration.startStation)
+                    .fontWeight(.bold)
+                    .foregroundStyle(.white)
+                
+                progressView(entry: entry)
+                
+                Text(entry.configuration.endStation)
+                    .fontWeight(.bold)
+                    .foregroundStyle(.white)
+                
+            }
             
-            progressView(entry: entry)
-            
-            Text(entry.configuration.endStation)
-                .fontWeight(.bold)
-                .foregroundStyle(.white)
-
+            if entry.configuration.progress == 1 {
+                if entry.configuration.progress == 1 {
+                    VStack {
+                        Image(systemName: "checkmark.circle.fill")
+                            .font(.largeTitle)
+                            .foregroundColor(.green)
+                            .scaleEffect(2, anchor: .center)
+                            .animation(.spring())
+                        
+                        Text("내리라고 ㅋ")
+                            .font(.system(size: 20, weight: .bold))
+                            .padding(.top ,30)
+                    }
+                    
+                }
+            }
         }
-        // entry 안에 있는 값을 통해 Gradient 해줘야함
         .containerBackground(LinearGradient(gradient: Gradient(stops: [
             Gradient.Stop(color: .line2, location: 0),
             Gradient.Stop(color: .line1, location: 1)
