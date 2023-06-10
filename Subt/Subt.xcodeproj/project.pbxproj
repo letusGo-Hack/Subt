@@ -50,6 +50,10 @@
 		CE5F857D2A34314C00C2068F /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F85732A34299300C2068F /* Response.swift */; };
 		CE5F857F2A34314F00C2068F /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F85752A3429B100C2068F /* ErrorMessage.swift */; };
 		CE5F85802A34315100C2068F /* SubwayLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F85772A342C6800C2068F /* SubwayLine.swift */; };
+		CE72F3622A347773000C0EE1 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE72F3612A347773000C0EE1 /* ViewModel.swift */; };
+		CE72F3632A3477D0000C0EE1 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE72F3612A347773000C0EE1 /* ViewModel.swift */; };
+		CE72F3652A3477E9000C0EE1 /* LinearProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE72F3642A3477E9000C0EE1 /* LinearProgressView.swift */; };
+		CE72F3662A3477EC000C0EE1 /* LinearProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE72F3642A3477E9000C0EE1 /* LinearProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +129,8 @@
 		CE5F85752A3429B100C2068F /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		CE5F85772A342C6800C2068F /* SubwayLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubwayLine.swift; sourceTree = "<group>"; };
 		CE5F857A2A34312900C2068F /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		CE72F3612A347773000C0EE1 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		CE72F3642A3477E9000C0EE1 /* LinearProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinearProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +208,7 @@
 				CE5F85702A34298300C2068F /* Models */,
 				CE345D7F2A340757009062DD /* SubtApp.swift */,
 				CE345D812A340757009062DD /* ContentView.swift */,
+				CE72F3612A347773000C0EE1 /* ViewModel.swift */,
 				71D47CB82A342BA4004164CB /* OptionButton.swift */,
 				CE345D832A340758009062DD /* Assets.xcassets */,
 				CE5F85482A34254200C2068F /* Item.swift */,
@@ -269,6 +276,7 @@
 		CE5F854F2A3427C800C2068F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CE72F3642A3477E9000C0EE1 /* LinearProgressView.swift */,
 				CE5F85502A3427C800C2068F /* LockScreenView.swift */,
 				CE5F85512A3427C800C2068F /* DynamicIslandExpandView.swift */,
 				CE5F85522A3427C800C2068F /* CompactTrailingView.swift */,
@@ -464,6 +472,8 @@
 				CE5F856C2A34282C00C2068F /* DynamicIslandExpandView.swift in Sources */,
 				CE5F85692A34282700C2068F /* CompactLeadingView.swift in Sources */,
 				CE5F856A2A34282900C2068F /* CompactTrailingView.swift in Sources */,
+				CE72F3652A3477E9000C0EE1 /* LinearProgressView.swift in Sources */,
+				CE72F3622A347773000C0EE1 /* ViewModel.swift in Sources */,
 				CE5F85762A3429B100C2068F /* ErrorMessage.swift in Sources */,
 				CE345D822A340757009062DD /* ContentView.swift in Sources */,
 				CE5F856D2A34283600C2068F /* SubtWidgetAttributes.swift in Sources */,
@@ -500,6 +510,7 @@
 				CE5F85602A3427F200C2068F /* SubtWidgetAttributes.swift in Sources */,
 				8C0DFBB32A3432A900BEBF98 /* SubtWidgetEntryView.swift in Sources */,
 				CE5F857C2A34313900C2068F /* Service.swift in Sources */,
+				CE72F3662A3477EC000C0EE1 /* LinearProgressView.swift in Sources */,
 				CE345DBD2A34077D009062DD /* AppIntent.swift in Sources */,
 				CE5F85612A3427FF00C2068F /* ContentView.swift in Sources */,
 				CE5F85632A34281B00C2068F /* LockScreenView.swift in Sources */,
@@ -507,6 +518,7 @@
 				CE345DB72A34077D009062DD /* SubtWidgetBundle.swift in Sources */,
 				CE5F857D2A34314C00C2068F /* Response.swift in Sources */,
 				CE5F85622A34280300C2068F /* Item.swift in Sources */,
+				CE72F3632A3477D0000C0EE1 /* ViewModel.swift in Sources */,
 				CE5F85672A34282400C2068F /* MinimalView.swift in Sources */,
 				CE5F85662A34282200C2068F /* CompactLeadingView.swift in Sources */,
 				CE5F855F2A3427EE00C2068F /* SubtWidgetLiveActivity.swift in Sources */,

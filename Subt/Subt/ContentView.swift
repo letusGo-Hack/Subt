@@ -12,28 +12,17 @@ import ActivityKit
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var items: [Item]
+    @StateObject var viewModel = ViewModel()
     
     var body: some View {
         NavigationView {
             Button("Start") {
-                let dynamicIslandWidgetAttributes = SubtWidgetAttributes(name: "test")
-                let contentState = SubtWidgetAttributes.ContentState(startStation: "신림", endStation: "삼성", emoji: "🐳")
-                
-                do {
-                    let activity = try Activity<SubtWidgetAttributes>.request(
-                        attributes: dynamicIslandWidgetAttributes,
-                        contentState: contentState
-                    )
-                    print(activity)
-                    
-                } catch {
-                    print(error)
-                }
+                viewModel.createLiveAcitiviy()
             }
             Text("Select an item")
         }.onAppear(perform: {
             Task {
-                try await Service().fetchArrivalInfo()
+                await viewModel.updateLiveActivity()
             }
         })
     }
