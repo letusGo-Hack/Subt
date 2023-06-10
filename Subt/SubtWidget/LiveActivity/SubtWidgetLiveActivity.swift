@@ -9,67 +9,47 @@ import ActivityKit
 import WidgetKit
 import SwiftUI
 
-struct SubtWidgetAttributes: ActivityAttributes {
-    public struct ContentState: Codable, Hashable {
-        // Dynamic stateful properties about your activity go here!
-        var emoji: String
-    }
-
-    // Fixed non-changing properties about your activity go here!
-    var name: String
-}
-
 struct SubtWidgetLiveActivity: Widget {
     var body: some WidgetConfiguration {
         ActivityConfiguration(for: SubtWidgetAttributes.self) { context in
             // Lock screen/banner UI goes here
-            VStack {
-                Text("Hello \(context.state.emoji)")
-            }
-            .activityBackgroundTint(Color.cyan)
-            .activitySystemActionForegroundColor(Color.black)
+            LockScreenView(context: context)
 
         } dynamicIsland: { context in
             DynamicIsland {
                 // Expanded UI goes here.  Compose the expanded UI through
                 // various regions, like leading/trailing/center/bottom
+                
+                DynamicIslandExpandedRegion(.center) {
+                    ProgressView(value: 1)
+                }
+                
                 DynamicIslandExpandedRegion(.leading) {
-                    Text("Leading")
+                    Text(context.state.startStation)
                 }
                 DynamicIslandExpandedRegion(.trailing) {
-                    Text("Trailing")
+                    Text(context.state.endStation)
                 }
+                                
                 DynamicIslandExpandedRegion(.bottom) {
                     Text("Bottom \(context.state.emoji)")
+                    Text("Bottom \(context.state.emoji)")
+                    Text("Bottom \(context.state.emoji)")
+
+                    
                     // more content
                 }
             } compactLeading: {
-                Text("L")
+                CompactLeadingView(context: context)
             } compactTrailing: {
-                Text("T \(context.state.emoji)")
+                CompactTrailingView(context: context)
             } minimal: {
-                Text(context.state.emoji)
+                MinimalView(context: context)
             }
             .widgetURL(URL(string: "http://www.apple.com"))
             .keylineTint(Color.red)
         }
     }
-}
-
-extension SubtWidgetAttributes {
-    fileprivate static var preview: SubtWidgetAttributes {
-        SubtWidgetAttributes(name: "World")
-    }
-}
-
-extension SubtWidgetAttributes.ContentState {
-    fileprivate static var smiley: SubtWidgetAttributes.ContentState {
-        SubtWidgetAttributes.ContentState(emoji: "😀")
-     }
-     
-     fileprivate static var starEyes: SubtWidgetAttributes.ContentState {
-         SubtWidgetAttributes.ContentState(emoji: "🤩")
-     }
 }
 
 #Preview("Notification", as: .content, using: SubtWidgetAttributes.preview) {

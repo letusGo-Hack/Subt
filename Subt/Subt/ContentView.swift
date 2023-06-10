@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import ActivityKit
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
@@ -14,24 +15,19 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
-                }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
+            Button("Start") {
+                let dynamicIslandWidgetAttributes = SubtWidgetAttributes(name: "test")
+                let contentState = SubtWidgetAttributes.ContentState(startStation: "신림", endStation: "삼성", emoji: "🐳")
+                
+                do {
+                    let activity = try Activity<SubtWidgetAttributes>.request(
+                        attributes: dynamicIslandWidgetAttributes,
+                        contentState: contentState
+                    )
+                    print(activity)
+                    
+                } catch {
+                    print(error)
                 }
             }
             Text("Select an item")
