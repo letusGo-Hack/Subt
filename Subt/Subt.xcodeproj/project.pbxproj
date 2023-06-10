@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		719F7DC92A34709D00767415 /* StationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F7DC82A34709D00767415 /* StationTextField.swift */; };
+		719F7DCB2A34710A00767415 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F7DCA2A34710A00767415 /* Title.swift */; };
 		71D47CB92A342BA4004164CB /* OptionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D47CB82A342BA4004164CB /* OptionButton.swift */; };
 		8C0DFBB12A34327D00BEBF98 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0DFBB02A34327D00BEBF98 /* Provider.swift */; };
 		8C0DFBB32A3432A900BEBF98 /* SubtWidgetEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0DFBB22A3432A900BEBF98 /* SubtWidgetEntryView.swift */; };
@@ -97,6 +98,7 @@
 
 /* Begin PBXFileReference section */
 		719F7DC82A34709D00767415 /* StationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationTextField.swift; sourceTree = "<group>"; };
+		719F7DCA2A34710A00767415 /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
 		71D47CB82A342BA4004164CB /* OptionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionButton.swift; sourceTree = "<group>"; };
 		8C0DFBB02A34327D00BEBF98 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		8C0DFBB22A3432A900BEBF98 /* SubtWidgetEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtWidgetEntryView.swift; sourceTree = "<group>"; };
@@ -212,9 +214,11 @@
 				CE345D812A340757009062DD /* ContentView.swift */,
 				CE72F3612A347773000C0EE1 /* ViewModel.swift */,
 				71D47CB82A342BA4004164CB /* OptionButton.swift */,
+				719F7DC82A34709D00767415 /* StationTextField.swift */,
 				CE345D832A340758009062DD /* Assets.xcassets */,
 				CE5F85482A34254200C2068F /* Item.swift */,
 				CE345D852A340758009062DD /* Preview Content */,
+				719F7DCA2A34710A00767415 /* Title.swift */,
 			);
 			path = Subt;
 			sourceTree = "<group>";
@@ -295,7 +299,6 @@
 				CE5F85732A34299300C2068F /* Response.swift */,
 				CE5F85752A3429B100C2068F /* ErrorMessage.swift */,
 				CE5F85772A342C6800C2068F /* SubwayLine.swift */,
-				719F7DC82A34709D00767415 /* StationTextField.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -470,6 +473,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE31AA882A345C2500EE1C14 /* RealtimeArrivalDTO.swift in Sources */,
+				719F7DCB2A34710A00767415 /* Title.swift in Sources */,
 				71D47CB92A342BA4004164CB /* OptionButton.swift in Sources */,
 				CE5F857B2A34312900C2068F /* Service.swift in Sources */,
 				CE5F856C2A34282C00C2068F /* DynamicIslandExpandView.swift in Sources */,
