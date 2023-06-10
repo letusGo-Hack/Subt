@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		719F7DC92A34709D00767415 /* StationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F7DC82A34709D00767415 /* StationTextField.swift */; };
+		719F7DCB2A34710A00767415 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F7DCA2A34710A00767415 /* Title.swift */; };
+		719F7DCC2A34726D00767415 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F7DCA2A34710A00767415 /* Title.swift */; };
+		719F7DCD2A34727200767415 /* StationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F7DC82A34709D00767415 /* StationTextField.swift */; };
+		719F7DCE2A34727600767415 /* OptionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D47CB82A342BA4004164CB /* OptionButton.swift */; };
+		719F7DD02A3475F400767415 /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F7DCF2A3475F400767415 /* StartButton.swift */; };
+		719F7DD12A34784E00767415 /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F7DCF2A3475F400767415 /* StartButton.swift */; };
 		71D47CB92A342BA4004164CB /* OptionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D47CB82A342BA4004164CB /* OptionButton.swift */; };
 		8C0DFBB12A34327D00BEBF98 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0DFBB02A34327D00BEBF98 /* Provider.swift */; };
 		8C0DFBB32A3432A900BEBF98 /* SubtWidgetEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0DFBB22A3432A900BEBF98 /* SubtWidgetEntryView.swift */; };
@@ -95,6 +102,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		719F7DC82A34709D00767415 /* StationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationTextField.swift; sourceTree = "<group>"; };
+		719F7DCA2A34710A00767415 /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
+		719F7DCF2A3475F400767415 /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
 		71D47CB82A342BA4004164CB /* OptionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionButton.swift; sourceTree = "<group>"; };
 		8C0DFBB02A34327D00BEBF98 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		8C0DFBB22A3432A900BEBF98 /* SubtWidgetEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtWidgetEntryView.swift; sourceTree = "<group>"; };
@@ -210,9 +220,13 @@
 				CE345D812A340757009062DD /* ContentView.swift */,
 				CE72F3612A347773000C0EE1 /* ViewModel.swift */,
 				71D47CB82A342BA4004164CB /* OptionButton.swift */,
+				719F7DC82A34709D00767415 /* StationTextField.swift */,
+				71D47CB82A342BA4004164CB /* OptionButton.swift */,
+				719F7DCF2A3475F400767415 /* StartButton.swift */,
 				CE345D832A340758009062DD /* Assets.xcassets */,
 				CE5F85482A34254200C2068F /* Item.swift */,
 				CE345D852A340758009062DD /* Preview Content */,
+				719F7DCA2A34710A00767415 /* Title.swift */,
 			);
 			path = Subt;
 			sourceTree = "<group>";
@@ -467,6 +481,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE31AA882A345C2500EE1C14 /* RealtimeArrivalDTO.swift in Sources */,
+				719F7DCB2A34710A00767415 /* Title.swift in Sources */,
 				71D47CB92A342BA4004164CB /* OptionButton.swift in Sources */,
 				CE5F857B2A34312900C2068F /* Service.swift in Sources */,
 				CE5F856C2A34282C00C2068F /* DynamicIslandExpandView.swift in Sources */,
@@ -480,7 +495,9 @@
 				CE5F85782A342C6800C2068F /* SubwayLine.swift in Sources */,
 				CE345D802A340757009062DD /* SubtApp.swift in Sources */,
 				CE5F85742A34299300C2068F /* Response.swift in Sources */,
+				719F7DC92A34709D00767415 /* StationTextField.swift in Sources */,
 				CE5F856B2A34282B00C2068F /* LockScreenView.swift in Sources */,
+				719F7DD02A3475F400767415 /* StartButton.swift in Sources */,
 				CE5F85682A34282500C2068F /* MinimalView.swift in Sources */,
 				CE5F85492A34254200C2068F /* Item.swift in Sources */,
 			);
@@ -507,6 +524,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				719F7DCE2A34727600767415 /* OptionButton.swift in Sources */,
+				719F7DCC2A34726D00767415 /* Title.swift in Sources */,
 				CE5F85602A3427F200C2068F /* SubtWidgetAttributes.swift in Sources */,
 				8C0DFBB32A3432A900BEBF98 /* SubtWidgetEntryView.swift in Sources */,
 				CE5F857C2A34313900C2068F /* Service.swift in Sources */,
@@ -528,6 +547,8 @@
 				CE5F85652A34282000C2068F /* CompactTrailingView.swift in Sources */,
 				CE345DBB2A34077D009062DD /* SubtWidget.swift in Sources */,
 				CE5F85802A34315100C2068F /* SubwayLine.swift in Sources */,
+				719F7DD12A34784E00767415 /* StartButton.swift in Sources */,
+				719F7DCD2A34727200767415 /* StationTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
