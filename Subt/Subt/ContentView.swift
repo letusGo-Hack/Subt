@@ -31,7 +31,11 @@ struct ContentView: View {
                 }
             }
             Text("Select an item")
-        }
+        }.onAppear(perform: {
+            Task {
+                try await Service().fetchArrivalInfo()
+            }
+        })
     }
 
     private func addItem() {
