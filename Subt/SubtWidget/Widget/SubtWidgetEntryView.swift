@@ -12,45 +12,35 @@ struct SubtWidgetEntryView : View {
     var entry: Provider.Entry
     
     var body: some View {
-        VStack {
-            Text(entry.date, style: .time)
+        HStack(spacing : 10) {
+            Text(entry.configuration.startStation)
+                .fontWeight(.bold)
+                .foregroundStyle(.white)
             
-            HStack {
-                Text(entry.configuration.startStation)
-                progressView(entry: entry)
-                Text(entry.configuration.endStation)
-            }
+            progressView(entry: entry)
             
+            Text(entry.configuration.endStation)
+                .fontWeight(.bold)
+                .foregroundStyle(.white)
+
         }
         // entry 안에 있는 값을 통해 Gradient 해줘야함
-        .containerBackground(.blue, for: .widget)
+        .containerBackground(LinearGradient(gradient: Gradient(stops: [
+            Gradient.Stop(color: .line2, location: 0),
+            Gradient.Stop(color: .line1, location: 1)
+        ]), startPoint: .leading, endPoint: .trailing), for: .widget)
     }
     
     private func progressView(entry : Provider.Entry) -> some View {
-        VStack {
-            ProgressView(value: entry.configuration.progress, total: 1)
-                .tint(.red)
-            Text("🚂")
-        }
-    }
-    
-    struct BottomLineView: View {
-        var time: Date
-        
-        var body: some View {
-            HStack {
-                Divider().frame(width: 50,
-                                height: 10)
-                .overlay(.gray).cornerRadius(5)
-                Image("delivery")
-                VStack {
-                    RoundedRectangle(cornerRadius: 5)
-                        .stroke(style: StrokeStyle(lineWidth: 1,
-                                                   dash: [4]))
-                        .frame(height: 10)
-                        .overlay(Text(time, style: .timer).font(.system(size: 8)).multilineTextAlignment(.center))
-                }
-                Image("home-address")
+        VStack(alignment: .center) {
+            Spacer(minLength: 70)
+            GeometryReader { geometry in
+                Image(systemName: "train.side.front.car")
+                    .foregroundStyle(.white)
+                    .offset(x: geometry.size.width * CGFloat(entry.configuration.progress) - 26 , y: -20)
+                
+                ProgressView(value: entry.configuration.progress, total: 1)
+                    .tint(.white)
             }
         }
     }
