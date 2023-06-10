@@ -38,6 +38,10 @@
 		CE5F856B2A34282B00C2068F /* LockScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F85502A3427C800C2068F /* LockScreenView.swift */; };
 		CE5F856C2A34282C00C2068F /* DynamicIslandExpandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F85512A3427C800C2068F /* DynamicIslandExpandView.swift */; };
 		CE5F856D2A34283600C2068F /* SubtWidgetAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F85552A3427C800C2068F /* SubtWidgetAttributes.swift */; };
+		CE5F85722A34298300C2068F /* RealtimeArrival.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F85712A34298300C2068F /* RealtimeArrival.swift */; };
+		CE5F85742A34299300C2068F /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F85732A34299300C2068F /* Response.swift */; };
+		CE5F85762A3429B100C2068F /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F85752A3429B100C2068F /* ErrorMessage.swift */; };
+		CE5F85782A342C6800C2068F /* SubwayLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5F85772A342C6800C2068F /* SubwayLine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +110,10 @@
 		CE5F85542A3427C800C2068F /* MinimalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinimalView.swift; sourceTree = "<group>"; };
 		CE5F85552A3427C800C2068F /* SubtWidgetAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtWidgetAttributes.swift; sourceTree = "<group>"; };
 		CE5F85562A3427C800C2068F /* SubtWidgetLiveActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		CE5F85712A34298300C2068F /* RealtimeArrival.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealtimeArrival.swift; sourceTree = "<group>"; };
+		CE5F85732A34299300C2068F /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		CE5F85752A3429B100C2068F /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
+		CE5F85772A342C6800C2068F /* SubwayLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubwayLine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +176,7 @@
 		CE345D7E2A340757009062DD /* Subt */ = {
 			isa = PBXGroup;
 			children = (
+				CE5F85702A34298300C2068F /* Models */,
 				CE345D7F2A340757009062DD /* SubtApp.swift */,
 				CE345D812A340757009062DD /* ContentView.swift */,
 				71D47CB82A342BA4004164CB /* OptionButton.swift */,
@@ -245,6 +254,17 @@
 				CE5F85542A3427C800C2068F /* MinimalView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		CE5F85702A34298300C2068F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE5F85732A34299300C2068F /* Response.swift */,
+				CE5F85712A34298300C2068F /* RealtimeArrival.swift */,
+				CE5F85752A3429B100C2068F /* ErrorMessage.swift */,
+				CE5F85772A342C6800C2068F /* SubwayLine.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,12 +429,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				71D47CB92A342BA4004164CB /* OptionButton.swift in Sources */,
+				CE5F85722A34298300C2068F /* RealtimeArrival.swift in Sources */,
 				CE5F856C2A34282C00C2068F /* DynamicIslandExpandView.swift in Sources */,
 				CE5F85692A34282700C2068F /* CompactLeadingView.swift in Sources */,
 				CE5F856A2A34282900C2068F /* CompactTrailingView.swift in Sources */,
+				CE5F85762A3429B100C2068F /* ErrorMessage.swift in Sources */,
 				CE345D822A340757009062DD /* ContentView.swift in Sources */,
 				CE5F856D2A34283600C2068F /* SubtWidgetAttributes.swift in Sources */,
+				CE5F85782A342C6800C2068F /* SubwayLine.swift in Sources */,
 				CE345D802A340757009062DD /* SubtApp.swift in Sources */,
+				CE5F85742A34299300C2068F /* Response.swift in Sources */,
 				CE5F856B2A34282B00C2068F /* LockScreenView.swift in Sources */,
 				CE5F85682A34282500C2068F /* MinimalView.swift in Sources */,
 				CE5F85492A34254200C2068F /* Item.swift in Sources */,
