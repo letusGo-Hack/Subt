@@ -14,10 +14,10 @@ struct ConfigurationAppIntent: WidgetConfigurationIntent {
 
     // An example configurable parameter.
     
-    @Parameter(title: "출발 역", default: 0)
+    @Parameter(title: "출발 역", default: "")
     var startStation: String
     
-    @Parameter(title: "도착 역", default: 0)
+    @Parameter(title: "도착 역", default: "")
     var endStation: String
     
     @Parameter(title: "진행 상황", default: 0)

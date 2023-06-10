@@ -56,10 +56,10 @@ struct SubtWidgetEntryView : View {
     }
 }
 
-#Preview(as: WidgetFamily.systemMedium) {
-    SubtWidget()
-} timeline: {
-    SimpleEntry(date: .now, configuration: .sillimToNak)
-    SimpleEntry(date: .now + 3, configuration: .nakToSeocho)
-    SimpleEntry(date: .now + 6, configuration: .seochoToGangnam)
-}
+//#Preview(as: WidgetFamily.systemMedium) {
+//    SubtWidget()
+//} timeline: {
+//    SimpleEntry(date: .now, configuration: .sillimToNak)
+//    SimpleEntry(date: .now + 3, configuration: .nakToSeocho)
+//    SimpleEntry(date: .now + 6, configuration: .seochoToGangnam)
+//}
