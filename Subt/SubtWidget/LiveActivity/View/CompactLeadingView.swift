@@ -14,5 +14,6 @@ struct CompactLeadingView: View {
     
     var body: some View {
         Text(context.state.startStation)
+            .fontWeight(.bold)
     }
 }

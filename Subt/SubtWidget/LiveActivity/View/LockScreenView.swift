@@ -11,25 +11,19 @@ import WidgetKit
 struct LockScreenView: View {
     
     let context : ActivityViewContext<SubtWidgetAttributes>
+    var progress : Double
     
     var body: some View {
-        HStack {
-            VStack {
-                Text("출발 역")
-                Text("\(context.state.startStation)")
+        VStack {
+            HStack(spacing : 30) {
+                Text(context.state.startStation)
+                LinearProgressView(progress: progress)
+                Text(context.state.endStation)
             }
-            
-            VStack {
-                ProgressView(value: 1)
-                Text("🚂")
-            }
-            
-            VStack {
-                Text("도착 역")
-                Text("\(context.state.endStation)")
-            }
+            Text("\(context.state.remainStation)정거장 남았습니다.")
         }
-        .activityBackgroundTint(Color.green)
+        .padding()
+        .activityBackgroundTint(Color("LineAirport"))
         .activitySystemActionForegroundColor(Color.black)
     }
 }

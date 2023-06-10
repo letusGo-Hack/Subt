@@ -11,12 +11,18 @@ import ActivityKit
 import SwiftUI
 
 public struct SubtWidgetAttributes: ActivityAttributes {
+    public enum OperationState : Int, Codable, Hashable {
+        case departure
+        case moving
+        case arrived
+    }
+    
     public struct ContentState: Codable, Hashable {
         // Dynamic stateful properties about your activity go here!
         var startStation : String
         var endStation : String
-        
-        var emoji: String
+        var state : OperationState
+        var remainStation : Int
     }
 
     // Fixed non-changing properties about your activity go here!
@@ -28,13 +34,13 @@ extension SubtWidgetAttributes {
         SubtWidgetAttributes(name: "World")
     }
 }
-
-extension SubtWidgetAttributes.ContentState {
-    static var smiley: SubtWidgetAttributes.ContentState {
-        SubtWidgetAttributes.ContentState(startStation: "신림", endStation: "삼성", emoji: "🐳")
-     }
-     
-     static var starEyes: SubtWidgetAttributes.ContentState {
-         SubtWidgetAttributes.ContentState(startStation: "신림", endStation: "삼성", emoji: "🐳")
-     }
-}
+//
+//extension SubtWidgetAttributes.ContentState {
+//    static var start: SubtWidgetAttributes.ContentState {
+//        SubtWidgetAttributes.ContentState(startStation: "신림", endStation: "삼성", remainStation: 10)
+//     }
+//     
+//     static var half: SubtWidgetAttributes.ContentState {
+//         SubtWidgetAttributes.ContentState(startStation: "신림", endStation: "삼성", remainStation: 5)
+//     }
+//}

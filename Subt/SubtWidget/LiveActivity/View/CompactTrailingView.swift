@@ -14,5 +14,6 @@ struct CompactTrailingView: View {
     
     var body: some View {
         Text(context.state.endStation)
+            .fontWeight(.bold)
     }
 }

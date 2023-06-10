@@ -35,22 +35,28 @@ struct Provider: AppIntentTimelineProvider {
     }
     
     func timeline(for configuration: ConfigurationAppIntent, in context: Context) async -> Timeline<SimpleEntry> {
-        var initialEntry = ConfigurationAppIntent()
+        let initialEntry = ConfigurationAppIntent()
         initialEntry.startStation = startStation
+        initialEntry.progress = 0
         initialEntry.endStation = endStation
         
-        var entries: [SimpleEntry] = [SimpleEntry(date: .now, configuration: configuration)]
+        var entries: [SimpleEntry] = [SimpleEntry(date: .now, configuration: initialEntry)]
         
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         // 남은역 받아오기
+        
+        var date = Date()
+        
         for currentStation in 1...stationToGo {
             let intent = ConfigurationAppIntent()
-            intent.progress = Double(currentStation / stationToGo)
+            intent.progress = Double(currentStation) / Double(stationToGo)
             intent.startStation = startStation
             intent.endStation = endStation
             print(intent.progress)
-            let entry = SimpleEntry(date: .now + 5, configuration: intent)
+            let entry = SimpleEntry(date: date, configuration: intent)
             entries.append(entry)
+            
+            date += 2
         }
         
         return Timeline(entries: entries, policy: .atEnd)

@@ -10,18 +10,25 @@ import WidgetKit
 import SwiftUI
 
 struct SubtWidgetLiveActivity: Widget {
+    
+    @State private var progress : Double = 0
+    
     var body: some WidgetConfiguration {
         ActivityConfiguration(for: SubtWidgetAttributes.self) { context in
             // Lock screen/banner UI goes here
-            LockScreenView(context: context)
-
+            LockScreenView(context: context, progress: progress)
+            
         } dynamicIsland: { context in
             DynamicIsland {
                 // Expanded UI goes here.  Compose the expanded UI through
                 // various regions, like leading/trailing/center/bottom
                 
                 DynamicIslandExpandedRegion(.center) {
-                    ProgressView(value: 1)
+                    HStack(spacing : 30) {
+                        Text(context.state.startStation)
+                        LinearProgressView(progress: progress)
+                        Text(context.state.endStation)
+                    }
                 }
                 
                 DynamicIslandExpandedRegion(.leading) {
@@ -30,14 +37,9 @@ struct SubtWidgetLiveActivity: Widget {
                 DynamicIslandExpandedRegion(.trailing) {
                     Text(context.state.endStation)
                 }
-                                
+                
                 DynamicIslandExpandedRegion(.bottom) {
-                    Text("Bottom \(context.state.emoji)")
-                    Text("Bottom \(context.state.emoji)")
-                    Text("Bottom \(context.state.emoji)")
-
-                    
-                    // more content
+                    Text("\(context.state.remainStation)정거장 남았습니다.")
                 }
             } compactLeading: {
                 CompactLeadingView(context: context)
@@ -49,12 +51,16 @@ struct SubtWidgetLiveActivity: Widget {
             .widgetURL(URL(string: "http://www.apple.com"))
             .keylineTint(Color.red)
         }
+        
     }
+    
+
+    
 }
 
-#Preview("Notification", as: .content, using: SubtWidgetAttributes.preview) {
-   SubtWidgetLiveActivity()
-} contentStates: {
-    SubtWidgetAttributes.ContentState.smiley
-    SubtWidgetAttributes.ContentState.starEyes
-}
+//#Preview("Notification", as: .content, using: SubtWidgetAttributes.preview) {
+//    SubtWidgetLiveActivity()
+//} contentStates: {
+//    SubtWidgetAttributes.ContentState.start
+//    SubtWidgetAttributes.ContentState.half
+//}
