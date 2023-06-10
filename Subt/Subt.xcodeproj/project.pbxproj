@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71D47CB92A342BA4004164CB /* OptionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D47CB82A342BA4004164CB /* OptionButton.swift */; };
 		CE345D802A340757009062DD /* SubtApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE345D7F2A340757009062DD /* SubtApp.swift */; };
 		CE345D822A340757009062DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE345D812A340757009062DD /* ContentView.swift */; };
 		CE345D842A340758009062DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE345D832A340758009062DD /* Assets.xcassets */; };
@@ -78,6 +79,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		71D47CB82A342BA4004164CB /* OptionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionButton.swift; sourceTree = "<group>"; };
 		CE345D7C2A340757009062DD /* Subt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Subt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE345D7F2A340757009062DD /* SubtApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtApp.swift; sourceTree = "<group>"; };
 		CE345D812A340757009062DD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			children = (
 				CE345D7F2A340757009062DD /* SubtApp.swift */,
 				CE345D812A340757009062DD /* ContentView.swift */,
+				71D47CB82A342BA4004164CB /* OptionButton.swift */,
 				CE345D832A340758009062DD /* Assets.xcassets */,
 				CE5F85482A34254200C2068F /* Item.swift */,
 				CE345D852A340758009062DD /* Preview Content */,
@@ -405,6 +408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71D47CB92A342BA4004164CB /* OptionButton.swift in Sources */,
 				CE5F856C2A34282C00C2068F /* DynamicIslandExpandView.swift in Sources */,
 				CE5F85692A34282700C2068F /* CompactLeadingView.swift in Sources */,
 				CE5F856A2A34282900C2068F /* CompactTrailingView.swift in Sources */,
