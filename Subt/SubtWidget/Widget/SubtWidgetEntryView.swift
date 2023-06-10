@@ -14,15 +14,29 @@ struct SubtWidgetEntryView : View {
     var body: some View {
         ZStack {
             HStack(spacing : 10) {
-                Text(entry.configuration.startStation)
-                    .fontWeight(.bold)
-                    .foregroundStyle(.white)
+                
+                VStack {
+                    Text(entry.configuration.startStation)
+                        .fontWeight(.bold)
+                        .foregroundStyle(.white)
+                    
+                    Text("2호선")
+                        .foregroundStyle(.white)
+                        .font(.caption)
+                }
+                
                 
                 progressView(entry: entry)
                 
-                Text(entry.configuration.endStation)
-                    .fontWeight(.bold)
-                    .foregroundStyle(.white)
+                VStack {
+                    Text(entry.configuration.endStation)
+                        .fontWeight(.bold)
+                        .foregroundStyle(.white)
+                    
+                    Text("2호선")
+                        .foregroundStyle(.white)
+                        .font(.caption)
+                }
                 
             }
             
@@ -65,7 +79,7 @@ struct SubtWidgetEntryView : View {
         let content = UNMutableNotificationContent()
         content.title = "목적지에 거의 도착했어요!"
         content.body = "물건을 잘 챙기고, 늦지않게 내릴수 있도록 준비하세요."
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 12, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 28, repeats: false)
         let request = UNNotificationRequest(identifier: "NotificationIdentifier", content: content, trigger: trigger)
         UNUserNotificationCenter.current().add(request) { error in
             if let error = error {

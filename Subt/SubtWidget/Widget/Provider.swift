@@ -56,7 +56,7 @@ struct Provider: AppIntentTimelineProvider {
             let entry = SimpleEntry(date: date, configuration: intent)
             entries.append(entry)
             
-            date += 2
+            date += 5
         }
         
         return Timeline(entries: entries, policy: .atEnd)
