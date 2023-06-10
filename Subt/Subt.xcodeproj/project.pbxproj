@@ -218,10 +218,10 @@
 				CE72F3612A347773000C0EE1 /* ViewModel.swift */,
 				719F7DC82A34709D00767415 /* StationTextField.swift */,
 				71D47CB82A342BA4004164CB /* OptionButton.swift */,
+				719F7DCA2A34710A00767415 /* Title.swift */,
 				719F7DCF2A3475F400767415 /* StartButton.swift */,
 				CE345D832A340758009062DD /* Assets.xcassets */,
 				CE345D852A340758009062DD /* Preview Content */,
-				719F7DCA2A34710A00767415 /* Title.swift */,
 			);
 			path = Subt;
 			sourceTree = "<group>";
