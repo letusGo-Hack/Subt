@@ -21,3 +21,7 @@
 1. 메인 홈화면, 위젯
 2. 다이나믹 아일랜드
 3. 자주 가는 역 저장 (SwiftData)
+
+## 기술
+* WidgetKit
+* ActivityKit

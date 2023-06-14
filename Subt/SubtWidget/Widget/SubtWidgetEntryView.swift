@@ -46,7 +46,9 @@ struct SubtWidgetEntryView : View {
                         .font(.largeTitle)
                         .foregroundColor(.green)
                         .scaleEffect(2, anchor: .center)
-                        .animation(.spring())
+                        .animation(.bouncy, body: { view in
+                            view.frame()
+                        })
                         .onAppear {
                             pushEndNoti()
                         }

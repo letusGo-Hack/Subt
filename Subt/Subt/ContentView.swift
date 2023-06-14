@@ -12,15 +12,14 @@ struct ContentView: View {
     @StateObject var viewModel = ViewModel()
     @State var animation: Bool = false
     
-    @State var startText: String = ""
-    @State var endText: String = ""
+    @State var startText: String = "신림"
+    @State var endText: String = "삼성"
     
     @State var startTapped: Bool = false
     @State var endTapped: Bool = false
     
     var body: some View {
         VStack {
-
             Text("Subway Tracker Widget")
                 .font(.title)
             
@@ -30,12 +29,12 @@ struct ContentView: View {
             HStack {
                 VStack {
                     Title(title: "START")
-                    StationTextField(text: $startText, isTapped: $startTapped, name: "출발역")
+                    StationTextField(text: $startText, isTapped: $startTapped, name: "")
                 }
                 .padding()
                 VStack {
                     Title(title: "END")
-                    StationTextField(text: $endText, isTapped: $endTapped, name: "도착역")
+                    StationTextField(text: $endText, isTapped: $endTapped, name: "")
                 }
                 .padding()
             }
